@@ -3,6 +3,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import PlaceholderMedia from "@/components/ui/PlaceholderMedia";
 import Reveal from "@/components/ui/Reveal";
 import { site } from "@/data/site";
+import { portraits } from "@/data/portraits";
 
 export const metadata = {
   title: "Leadership",
@@ -13,7 +14,13 @@ export default function LeadershipPage() {
   return (
     <>
       <section className="relative flex h-[50vh] min-h-[360px] items-end overflow-hidden bg-ink text-paper">
-        <PlaceholderMedia tone="charcoal" className="absolute inset-0" />
+        <PlaceholderMedia
+          src={portraits.smile.src}
+          alt={portraits.smile.alt}
+          position="center 18%"
+          priority
+          className="absolute inset-0"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/10" />
         <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 pb-16 md:px-10">
           <Reveal>
@@ -35,8 +42,8 @@ export default function LeadershipPage() {
         <div className="mx-auto max-w-[1600px]">
           <SectionHeading
             eyebrow="Parliamentary Leadership"
-            title="Leading the Ninth and Tenth Assemblies"
-            description="Placeholder — verified details of committee leadership and parliamentary roles will be presented here."
+            title="Representing Kogi East in the Senate"
+            description="Placeholder — verified details of Sen. Jibrin Isah’s committee work and parliamentary roles will be presented here."
           />
         </div>
       </section>

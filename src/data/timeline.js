@@ -6,7 +6,7 @@ export const timeline = [
     title: "Education",
     period: "Placeholder",
     description:
-      "Placeholder — verified educational background to be supplied by the Office of the Speaker.",
+      "Placeholder — verified educational background to be supplied by the office of Sen. Jibrin Isah.",
   },
   {
     id: "professional-career",
@@ -14,7 +14,7 @@ export const timeline = [
     title: "Professional Career",
     period: "Placeholder",
     description:
-      "Placeholder — verified professional career details to be supplied by the Office of the Speaker.",
+      "Placeholder — verified professional career details to be supplied by the office of Sen. Jibrin Isah.",
   },
   {
     id: "public-service",
@@ -22,7 +22,7 @@ export const timeline = [
     title: "Public Service",
     period: "Placeholder",
     description:
-      "Placeholder — verified public service record to be supplied by the Office of the Speaker.",
+      "Placeholder — verified public service record to be supplied by the office of Sen. Jibrin Isah.",
   },
   {
     id: "parliamentary-leadership",
@@ -30,14 +30,14 @@ export const timeline = [
     title: "Parliamentary Leadership",
     period: "Placeholder",
     description:
-      "Placeholder — verified parliamentary leadership record to be supplied by the Office of the Speaker.",
+      "Placeholder — verified parliamentary record to be supplied by the office of Sen. Jibrin Isah.",
   },
   {
-    id: "speakership",
+    id: "senate",
     phase: "05",
-    title: "Speakership",
+    title: "The Senate",
     period: "Placeholder",
     description:
-      "Placeholder — verified details of the Speakership to be supplied by the Office of the Speaker.",
+      "Placeholder — verified details of his service as Senator representing Kogi East, widely known as Echocho, to be supplied by his office.",
   },
 ];

@@ -12,7 +12,13 @@ export default function ProjectCard({ project }) {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="h-full w-full"
         >
-          <PlaceholderMedia tone="forest" className="h-full w-full" />
+          <PlaceholderMedia
+            src={project.image}
+            alt={project.title}
+            position={project.position}
+            fit={project.fit}
+            className="h-full w-full"
+          />
         </motion.div>
         <span className="absolute left-4 top-4 rounded-full bg-paper/90 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.12em] text-ink">
           {project.category}

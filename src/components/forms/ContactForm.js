@@ -48,7 +48,7 @@ export default function ContactForm() {
           >
             <p className="font-display text-xl text-ink">Thank you.</p>
             <p className="mt-3 text-[14px] text-ink-soft/70">
-              Your message has been received by the Office of the Speaker.
+              Your message has been received by the office of {site.name}.
             </p>
           </motion.div>
         ) : (

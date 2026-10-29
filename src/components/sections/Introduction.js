@@ -1,6 +1,7 @@
 import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
 import PlaceholderMedia from "@/components/ui/PlaceholderMedia";
+import { portraits } from "@/data/portraits";
 
 export default function Introduction() {
   return (
@@ -10,7 +11,7 @@ export default function Introduction() {
           <Reveal>
             <span className="mb-8 inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.24em] text-forest">
               <span className="h-px w-8 bg-current" />
-              Message from the Speaker
+              Message from the Senator
             </span>
           </Reveal>
           <Reveal delay={0.05}>
@@ -20,24 +21,25 @@ export default function Introduction() {
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-8 max-w-lg text-[15px] leading-relaxed text-ink-soft/80">
-              Placeholder introduction — a short message from the Speaker
-              will be provided here once verified content is supplied by the
-              Office of the Speaker. This section is designed to hold an
-              authentic reflection on the role and responsibility of the
-              House of Representatives to the Nigerian people.
+              Placeholder introduction — a short message from Sen. Jibrin
+              Isah, widely known as Echocho, will be provided here once
+              verified content is supplied by his office. This section is
+              designed to hold an authentic reflection on his service to
+              the people of Kogi East and the Nigerian Senate.
             </p>
           </Reveal>
           <Reveal delay={0.22} className="mt-10">
             <Button href="/about" variant="ghost" className="!px-0 text-ink">
-              Read the Speaker&rsquo;s Message
+              Read the Senator&rsquo;s Message
             </Button>
           </Reveal>
         </div>
 
         <Reveal variant="scale" delay={0.1} className="h-[420px] md:h-[560px]">
           <PlaceholderMedia
-            tone="paper"
-            label="National Assembly / Speaker Portrait Placeholder"
+            src={portraits.smile.src}
+            alt={portraits.smile.alt}
+            position={portraits.smile.position}
             className="h-full w-full"
           />
         </Reveal>

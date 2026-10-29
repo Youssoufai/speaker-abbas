@@ -10,7 +10,7 @@ export default function SpeechesSection() {
       <div className="mx-auto max-w-[1600px]">
         <div className="flex flex-wrap items-end justify-between gap-8">
           <SectionHeading
-            eyebrow="Voice of the House"
+            eyebrow="Voice of the Senate"
             title="Speeches & Statements"
             tone="light"
           />

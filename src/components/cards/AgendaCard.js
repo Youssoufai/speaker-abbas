@@ -16,7 +16,12 @@ export default function AgendaCard({ item }) {
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         className="absolute inset-0"
       >
-        <PlaceholderMedia tone="charcoal" className="h-full w-full" />
+        <PlaceholderMedia
+          src={item.image}
+          alt={item.title}
+          position={item.position}
+          className="h-full w-full"
+        />
       </motion.div>
 
       <motion.div

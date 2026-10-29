@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowDown } from "lucide-react";
 import { site } from "@/data/site";
+import { portraits } from "@/data/portraits";
 import AnimatedText from "@/components/ui/AnimatedText";
 import Button from "@/components/ui/Button";
 import PlaceholderMedia from "@/components/ui/PlaceholderMedia";
@@ -18,8 +19,10 @@ export default function Hero() {
         className="absolute inset-0"
       >
         <PlaceholderMedia
-          tone="forest"
-          label="Official Portrait Placeholder — Rt. Hon. Tajudeen Abbas"
+          src={portraits.speaking.src}
+          alt={portraits.speaking.alt}
+          position={portraits.speaking.position}
+          priority
           className="h-full w-full"
         />
       </motion.div>
@@ -43,7 +46,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-6 text-[13px] font-medium uppercase tracking-[0.28em] text-gold-soft"
         >
-          Rt. Hon. Tajudeen Abbas
+          {site.name} · {site.nickname}
         </motion.p>
 
         <AnimatedText

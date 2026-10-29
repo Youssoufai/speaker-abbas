@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import PlaceholderMedia from "@/components/ui/PlaceholderMedia";
 import { speeches } from "@/data/speeches";
+import { portraits } from "@/data/portraits";
 import { formatDate } from "@/lib/format";
 
 export async function generateStaticParams() {
@@ -28,7 +29,12 @@ export default async function SpeechPage({ params }) {
   return (
     <article>
       <section className="relative flex h-[55vh] min-h-[400px] items-end overflow-hidden bg-ink text-paper">
-        <PlaceholderMedia tone="charcoal" className="absolute inset-0" />
+        <PlaceholderMedia
+          src={portraits.speaking.src}
+          alt={portraits.speaking.alt}
+          position={portraits.speaking.position}
+          className="absolute inset-0"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/10" />
         <div className="relative z-10 mx-auto w-full max-w-[1000px] px-6 pb-16 md:px-10">
           <Reveal>

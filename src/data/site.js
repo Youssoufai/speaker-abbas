@@ -1,16 +1,17 @@
 // Central site configuration — placeholder values should be replaced with verified information.
 export const site = {
-  name: "Rt. Hon. Tajudeen Abbas",
-  shortName: "Tajudeen Abbas",
-  wordmark: "TAJUDEEN ABBAS",
-  title: "Speaker, House of Representatives",
+  name: "Sen. Jibrin Isah",
+  shortName: "Jibrin Isah",
+  nickname: "Echocho",
+  wordmark: "JIBRIN ISAH",
+  title: "Senator Representing Kogi East",
   fullTitle:
-    "Speaker of the House of Representatives of the Federal Republic of Nigeria",
-  institution: "House of Representatives · National Assembly · Abuja",
-  url: "https://www.tajudeenabbas.gov.ng",
+    "Senator representing Kogi East Senatorial District in the Senate of the Federal Republic of Nigeria",
+  institution: "Kogi East · Senate · National Assembly · Abuja",
+  url: "https://www.jibrinisah.gov.ng",
   description:
-    "The official website of Rt. Hon. Tajudeen Abbas, Speaker of the House of Representatives of the Federal Republic of Nigeria — leadership, legislative work, constituency service and news from the Office of the Speaker.",
-  email: "office@tajudeenabbas.gov.ng",
+    "The official website of Sen. Jibrin Isah, widely known as Echocho, Senator representing Kogi East in the Senate of the Federal Republic of Nigeria — leadership, legislative work, constituency service and news from his office.",
+  email: "office@jibrinisah.gov.ng",
   phone: "+234 (0) 000 000 0000",
   address: "National Assembly Complex, Three Arms Zone, Abuja, Nigeria",
   social: {

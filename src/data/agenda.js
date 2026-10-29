@@ -1,3 +1,5 @@
+import { photos } from "@/data/photos";
+
 // Legislative agenda priority areas — placeholder descriptions.
 export const agendaItems = [
   {
@@ -6,7 +8,8 @@ export const agendaItems = [
     title: "Economic Development",
     description:
       "Advancing legislation that strengthens Nigeria's economic resilience, growth and competitiveness.",
-    image: "/images/agenda/economic-development.jpg",
+    image: photos.marketStalls.src,
+    position: photos.marketStalls.position,
   },
   {
     id: "education",
@@ -14,7 +17,8 @@ export const agendaItems = [
     title: "Education",
     description:
       "Supporting policy and funding frameworks that expand access to quality education nationwide.",
-    image: "/images/agenda/education.jpg",
+    image: photos.examHall.src,
+    position: photos.examHall.position,
   },
   {
     id: "healthcare",
@@ -22,7 +26,7 @@ export const agendaItems = [
     title: "Healthcare",
     description:
       "Championing legislative reform that improves healthcare access, delivery and outcomes.",
-    image: "/images/agenda/healthcare.jpg",
+    image: null,
   },
   {
     id: "youth-human-capital",
@@ -30,7 +34,8 @@ export const agendaItems = [
     title: "Youth & Human Capital",
     description:
       "Investing in the development, skills and inclusion of Nigeria's young population.",
-    image: "/images/agenda/youth.jpg",
+    image: photos.youthEmpowerment.src,
+    position: photos.youthEmpowerment.position,
   },
   {
     id: "security",
@@ -38,14 +43,14 @@ export const agendaItems = [
     title: "Security",
     description:
       "Strengthening the legislative framework that safeguards lives, livelihoods and national stability.",
-    image: "/images/agenda/security.jpg",
+    image: null,
   },
   {
     id: "institutional-reform",
     index: "06",
     title: "Institutional Reform",
     description:
-      "Modernising the institution of the House to improve transparency, efficiency and public trust.",
-    image: "/images/agenda/institutional-reform.jpg",
+      "Modernising the institution of the Senate to improve transparency, efficiency and public trust.",
+    image: null,
   },
 ];

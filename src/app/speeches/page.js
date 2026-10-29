@@ -14,7 +14,7 @@ export default function SpeechesPage() {
     <section className="bg-forest-deep px-6 py-32 text-paper md:px-10">
       <div className="mx-auto max-w-[1600px]">
         <SectionHeading
-          eyebrow="Voice of the House"
+          eyebrow="Voice of the Senate"
           title="Speeches & Statements"
           tone="light"
           description="A record of formal remarks and statements delivered in the course of official duty."

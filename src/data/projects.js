@@ -1,4 +1,5 @@
-// Constituency projects — placeholder entries until verified data is supplied.
+import { photos } from "@/data/photos";
+
 export const projectCategories = [
   "Infrastructure",
   "Education",
@@ -9,35 +10,43 @@ export const projectCategories = [
 
 export const projects = [
   {
-    id: "project-one",
-    title: "Placeholder Infrastructure Project",
+    id: "market-stalls",
+    title: "Lock-up shops",
     category: "Infrastructure",
-    location: "Placeholder Location",
-    description: "Placeholder description of a constituency project.",
-    image: "/images/constituency/project-1.jpg",
+    location: "Kogi East",
+    description:
+      "A row of lock-up shops under a metal roof, built for local traders.",
+    image: photos.marketStalls.src,
+    position: photos.marketStalls.position,
   },
   {
-    id: "project-two",
-    title: "Placeholder Education Initiative",
+    id: "road-works",
+    title: "Road construction",
+    category: "Infrastructure",
+    location: "Kogi East",
+    description:
+      "Excavation, drainage and foundation work on a constituency road project.",
+    image: photos.roadWorks.src,
+    position: photos.roadWorks.position,
+    fit: photos.roadWorks.fit,
+  },
+  {
+    id: "school-exam",
+    title: "School examinations",
     category: "Education",
-    location: "Placeholder Location",
-    description: "Placeholder description of an education initiative.",
-    image: "/images/constituency/project-2.jpg",
+    location: "Kogi East",
+    description: "Students sitting an examination in a constituency school.",
+    image: photos.schoolExam.src,
+    position: photos.schoolExam.position,
   },
   {
-    id: "project-three",
-    title: "Placeholder Empowerment Programme",
-    category: "Empowerment",
-    location: "Placeholder Location",
-    description: "Placeholder description of an empowerment programme.",
-    image: "/images/constituency/project-3.jpg",
-  },
-  {
-    id: "project-four",
-    title: "Placeholder Community Engagement",
+    id: "constituency-engagement",
+    title: "Constituency engagement",
     category: "Community Engagement",
-    location: "Placeholder Location",
-    description: "Placeholder description of a community engagement activity.",
-    image: "/images/constituency/project-4.jpg",
+    location: "Kogi East",
+    description:
+      "Sen. Jibrin Isah with a constituent during an engagement in the district.",
+    image: photos.engagement.src,
+    position: photos.engagement.position,
   },
 ];

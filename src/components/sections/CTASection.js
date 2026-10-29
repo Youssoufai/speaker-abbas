@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 import AnimatedText from "@/components/ui/AnimatedText";
 import PlaceholderMedia from "@/components/ui/PlaceholderMedia";
+import { portraits } from "@/data/portraits";
 
 export default function CTASection() {
   return (
@@ -15,7 +16,12 @@ export default function CTASection() {
         transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
         className="absolute inset-0"
       >
-        <PlaceholderMedia tone="forest" className="h-full w-full" />
+        <PlaceholderMedia
+          src={portraits.closeup.src}
+          alt=""
+          position={portraits.closeup.position}
+          className="h-full w-full"
+        />
       </motion.div>
       <div className="absolute inset-0 bg-ink/60" />
 
@@ -32,7 +38,7 @@ export default function CTASection() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mx-auto mt-8 max-w-md text-[16px] leading-relaxed text-paper/70"
         >
-          Stay informed about the work of the House.
+          Stay informed about the work of Sen. Jibrin Isah for Kogi East.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 16 }}

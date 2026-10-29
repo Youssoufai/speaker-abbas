@@ -6,13 +6,36 @@ import { cn } from "@/lib/utils";
  * A tasteful, deterministic placeholder for imagery that has not yet been
  * supplied. Renders a layered gradient + label instead of a broken image
  * request, so the visual system stays polished until real photography
- * is provided by the Office of the Speaker.
+ * is provided by the office of Sen. Jibrin Isah.
  */
 export default function PlaceholderMedia({
   label,
   tone = "forest",
   className,
+  src,
+  alt = "",
+  position = "center",
+  fit = "cover",
+  priority = false,
 }) {
+  if (src) {
+    return (
+      <div className={cn("relative h-full w-full overflow-hidden bg-ink", className)}>
+        <img
+          src={src}
+          alt={alt}
+          className={cn(
+            "h-full w-full",
+            fit === "contain" ? "object-contain" : "object-cover"
+          )}
+          style={{ objectPosition: position }}
+          loading={priority ? "eager" : "lazy"}
+          fetchPriority={priority ? "high" : "auto"}
+        />
+      </div>
+    );
+  }
+
   const tones = {
     forest:
       "from-forest via-forest-deep to-ink bg-[radial-gradient(circle_at_30%_20%,rgba(182,145,60,0.18),transparent_60%)]",

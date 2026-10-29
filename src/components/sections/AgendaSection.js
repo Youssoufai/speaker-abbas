@@ -10,7 +10,7 @@ export default function AgendaSection() {
         <SectionHeading
           eyebrow="Priorities"
           title="The Legislative Agenda"
-          description="Six priority areas shaping the legislative direction of the House."
+          description="Six priority areas shaping the legislative direction of the Senate."
           tone="light"
         />
 

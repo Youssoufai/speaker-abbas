@@ -4,6 +4,7 @@ import ProjectCard from "@/components/cards/ProjectCard";
 import Button from "@/components/ui/Button";
 import PlaceholderMedia from "@/components/ui/PlaceholderMedia";
 import { projects } from "@/data/projects";
+import { photos } from "@/data/photos";
 
 export default function ConstituencySection() {
   return (
@@ -12,16 +13,17 @@ export default function ConstituencySection() {
         <div className="grid gap-12 md:grid-cols-2 md:items-end">
           <SectionHeading
             eyebrow="On the Ground"
-            title="Serving the Constituency"
-            description="Development, community engagement and empowerment initiatives at the constituency level."
+            title="Serving Kogi East"
+            description="Development, community engagement and empowerment initiatives across Kogi East Senatorial District."
           />
           <Reveal
             variant="right"
             className="h-56 w-full overflow-hidden md:h-64"
           >
             <PlaceholderMedia
-              tone="charcoal"
-              label="Constituency Map Placeholder"
+              src={photos.communityAddress.src}
+              alt={photos.communityAddress.alt}
+              position={photos.communityAddress.position}
               className="h-full w-full"
             />
           </Reveal>
@@ -37,7 +39,7 @@ export default function ConstituencySection() {
 
         <Reveal className="mt-14">
           <Button href="/constituency" variant="outline" className="text-ink">
-            Explore Constituency Work
+            Explore Kogi East Work
           </Button>
         </Reveal>
       </div>

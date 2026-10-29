@@ -27,10 +27,11 @@ export const metadata = {
   },
   description: site.description,
   keywords: [
-    "Tajudeen Abbas",
-    "Speaker of the House of Representatives",
-    "Nigeria National Assembly",
-    "House of Representatives Nigeria",
+    "Jibrin Isah",
+    "Echocho",
+    "Senator Kogi East",
+    "Kogi East Senatorial District",
+    "Nigerian Senate",
   ],
   openGraph: {
     title: `${site.name} — ${site.title}`,

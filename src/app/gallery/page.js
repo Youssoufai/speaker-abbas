@@ -15,7 +15,7 @@ export default function GalleryPage() {
         <SectionHeading
           eyebrow="Visual Record"
           title="Gallery"
-          description="National Assembly proceedings, official engagements, constituency visits, international relations and public events."
+          description="Constituency projects, education, youth empowerment, official engagements and portraits."
         />
         <div className="mt-16">
           <GalleryGrid items={gallery} />

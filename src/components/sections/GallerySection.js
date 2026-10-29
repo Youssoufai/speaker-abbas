@@ -12,7 +12,7 @@ export default function GallerySection() {
           <SectionHeading
             eyebrow="Visual Record"
             title="Gallery"
-            description="A visual record of national assembly proceedings, official engagements and constituency work."
+            description="Constituency projects, education, empowerment and official engagements across Kogi East."
           />
           <Reveal>
             <Button href="/gallery" variant="ghost" className="!px-0 text-ink">

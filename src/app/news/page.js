@@ -16,7 +16,7 @@ export default function NewsPage() {
         <SectionHeading
           eyebrow="Newsroom"
           title="Latest from the Office"
-          description="Announcements, legislative updates and engagements from the Office of the Speaker."
+          description={`Announcements, legislative updates and engagements from the office of ${site.name}.`}
         />
 
         <div className="mt-16 grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">

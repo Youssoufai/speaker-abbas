@@ -4,7 +4,7 @@ export const speeches = [
     slug: "placeholder-speech-one",
     title: "Placeholder Speech Title: Resumption of Plenary",
     date: "2025-01-14",
-    location: "House of Representatives Chamber, Abuja",
+    location: "Senate Chamber, Abuja",
     excerpt:
       "Placeholder excerpt summarising the remarks delivered at this address.",
     content:
