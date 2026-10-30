@@ -22,7 +22,7 @@ export default function LeadershipTimeline({ compact = false }) {
           title="A Life in Public Service"
           description={
             !compact &&
-            "A career journey from education to national legislative leadership."
+            "From the classrooms of Kogi East to the banking floor, and then to two terms in the Senate."
           }
         />
 

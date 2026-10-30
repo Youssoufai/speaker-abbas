@@ -29,9 +29,12 @@ export const metadata = {
   keywords: [
     "Jibrin Isah",
     "Echocho",
-    "Senator Kogi East",
+    "Kogi East",
     "Kogi East Senatorial District",
+    "10th National Assembly",
     "Nigerian Senate",
+    "legislative record",
+    "public service archive",
   ],
   openGraph: {
     title: `${site.name} — ${site.title}`,

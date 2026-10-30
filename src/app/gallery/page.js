@@ -5,7 +5,7 @@ import { site } from "@/data/site";
 
 export const metadata = {
   title: "Gallery",
-  description: `Photo gallery of ${site.name}.`,
+  description: `Photographs of constituency projects, community engagements and portraits from the service of ${site.name} to Kogi East.`,
 };
 
 export default function GalleryPage() {
@@ -15,7 +15,7 @@ export default function GalleryPage() {
         <SectionHeading
           eyebrow="Visual Record"
           title="Gallery"
-          description="Constituency projects, education, youth empowerment, official engagements and portraits."
+          description="Constituency projects, community engagements and portraits from his service to Kogi East."
         />
         <div className="mt-16">
           <GalleryGrid items={gallery} />

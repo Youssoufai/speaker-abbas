@@ -28,6 +28,11 @@ export default function ProjectCard({ project }) {
         <p className="text-[12px] uppercase tracking-[0.16em] text-ink-soft/50">
           {project.location}
         </p>
+        {project.status ? (
+          <p className="mt-2 text-[12px] font-medium uppercase tracking-[0.12em] text-forest">
+            {project.status}
+          </p>
+        ) : null}
         <h3 className="mt-2 font-display text-xl tracking-tight text-ink">
           {project.title}
         </h3>

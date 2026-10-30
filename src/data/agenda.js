@@ -1,56 +1,58 @@
 import { photos } from "@/data/photos";
 
-// Legislative agenda priority areas — placeholder descriptions.
 export const agendaItems = [
   {
-    id: "economic-development",
+    id: "healthcare",
     index: "01",
-    title: "Economic Development",
+    title: "Healthcare",
     description:
-      "Advancing legislation that strengthens Nigeria's economic resilience, growth and competitiveness.",
-    image: photos.marketStalls.src,
-    position: photos.marketStalls.position,
+      "He sponsored the National Eye Centre bill for Ochadamu, which the Senate passed on 15 May 2025, and the bills to establish an orthopaedic hospital at Dekina, which the Senate passed in 2021 and advanced again in 2025.",
+    image: "/images/legislative/healthcare.jpeg",
+    position: "center",
   },
   {
     id: "education",
     index: "02",
     title: "Education",
     description:
-      "Supporting policy and funding frameworks that expand access to quality education nationwide.",
+      "He sponsored the bill to upgrade the College of Education, Ankpa, into a Federal University of Education. The Senate gave it a second reading in 2025 and sent it to the tertiary-education committee.",
     image: photos.examHall.src,
     position: photos.examHall.position,
   },
   {
-    id: "healthcare",
+    id: "agriculture",
     index: "03",
-    title: "Healthcare",
+    title: "Agriculture",
     description:
-      "Championing legislative reform that improves healthcare access, delivery and outcomes.",
-    image: null,
+      "He introduced a bill to establish a National Cashew Production and Research Institute at Idah, so the cashew wealth of Kogi East can support farmers, processing and jobs.",
+    image: "/images/legislative/farmland.jpeg",
+    position: "center",
   },
   {
-    id: "youth-human-capital",
+    id: "roads",
     index: "04",
-    title: "Youth & Human Capital",
+    title: "Federal roads",
     description:
-      "Investing in the development, skills and inclusion of Nigeria's young population.",
-    image: photos.youthEmpowerment.src,
-    position: photos.youthEmpowerment.position,
+      "On 15 October 2025 the Senate adopted his motion and called for the Anyigba–Dekina–Shintaku Road to be re-awarded and funded.",
+    image: "/images/legislative/road-construction.jpeg",
+    position: "center",
   },
   {
-    id: "security",
+    id: "customs",
     index: "05",
-    title: "Security",
+    title: "Customs oversight",
     description:
-      "Strengthening the legislative framework that safeguards lives, livelihoods and national stability.",
-    image: null,
+      "On 7 August 2023 the Senate named him chairman of the Committee on Customs, Excise and Tariff. In 2025 he sponsored an amendment to the Customs and Excise Management Act.",
+    image: "/images/legislative/senate-floor.jpeg",
+    position: "center 30%",
   },
   {
-    id: "institutional-reform",
+    id: "oversight",
     index: "06",
-    title: "Institutional Reform",
+    title: "Public finance",
     description:
-      "Modernising the institution of the Senate to improve transparency, efficiency and public trust.",
-    image: null,
+      "On 11 March 2024 the Senate inaugurated him as chairman of the ad-hoc committee on Ways and Means advances and the Anchor Borrowers’ Programme.",
+    image: "/images/legislative/public-engagement.jpeg",
+    position: "center 35%",
   },
 ];

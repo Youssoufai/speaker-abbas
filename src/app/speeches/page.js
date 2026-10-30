@@ -6,7 +6,7 @@ import { site } from "@/data/site";
 
 export const metadata = {
   title: "Speeches & Statements",
-  description: `Speeches and statements delivered by ${site.name}.`,
+  description: `Speeches and statements of ${site.name} from his service in the Senate.`,
 };
 
 export default function SpeechesPage() {
@@ -14,18 +14,24 @@ export default function SpeechesPage() {
     <section className="bg-forest-deep px-6 py-32 text-paper md:px-10">
       <div className="mx-auto max-w-[1600px]">
         <SectionHeading
-          eyebrow="Voice of the Senate"
+          eyebrow="Statements"
           title="Speeches & Statements"
           tone="light"
-          description="A record of formal remarks and statements delivered in the course of official duty."
+          description="Addresses and statements from his service in the Senate and across Kogi East."
         />
 
         <div className="mt-16">
-          {speeches.map((speech, i) => (
-            <Reveal key={speech.slug} delay={i * 0.06}>
-              <SpeechCard speech={speech} />
-            </Reveal>
-          ))}
+          {speeches.length === 0 ? (
+            <p className="max-w-xl text-[15px] leading-relaxed text-paper/70">
+              From the floor of the Senate and from engagements with the people of Kogi East.
+            </p>
+          ) : (
+            speeches.map((speech, i) => (
+              <Reveal key={speech.slug} delay={i * 0.06}>
+                <SpeechCard speech={speech} />
+              </Reveal>
+            ))
+          )}
         </div>
       </div>
     </section>

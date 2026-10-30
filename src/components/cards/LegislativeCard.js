@@ -2,6 +2,10 @@ import { cn } from "@/lib/utils";
 
 const statusStyles = {
   Passed: "bg-forest/10 text-forest",
+  "Passed by Senate": "bg-forest/10 text-forest",
+  "Senate resolution": "bg-forest/10 text-forest",
+  "Second reading": "bg-gold/10 text-gold",
+  "First reading": "bg-ink/10 text-ink-soft",
   "In Progress": "bg-gold/10 text-gold",
   "Under Review": "bg-ink/10 text-ink-soft",
 };
@@ -22,6 +26,11 @@ export default function LegislativeCard({ item }) {
         <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-ink-soft/70">
           {item.description}
         </p>
+        {item.source ? (
+          <p className="mt-3 text-[12px] uppercase tracking-[0.12em] text-ink-soft/45">
+            Source: {item.source}
+          </p>
+        ) : null}
       </div>
       <span
         className={cn(

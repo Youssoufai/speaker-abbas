@@ -5,7 +5,7 @@ import { site } from "@/data/site";
 
 export const metadata = {
   title: "Contact the Office",
-  description: `Contact the Office of ${site.name}, ${site.fullTitle}.`,
+  description: `Contact the office of ${site.name}, senator for Kogi East.`,
 };
 
 export default function ContactPage() {

@@ -25,25 +25,27 @@ export default function Footer() {
             <p className="font-display text-2xl tracking-tight">
               {site.wordmark}
             </p>
-            <p className="mt-3 max-w-xs text-[13px] leading-relaxed text-paper/55">
-              {site.title}
-              <br />
-              {site.fullTitle}
+            <p className="mt-3 max-w-sm text-[13px] leading-relaxed text-paper/55">
+              {site.name}, senator for Kogi East in the 10th National Assembly (2023–2027). Legislative work, committee leadership and constituency projects for the people of the district.
             </p>
-            <div className="mt-8 flex items-center gap-4">
-              {socialIcons.map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-line-invert text-paper/70 transition-colors duration-300 hover:border-gold-soft hover:text-gold-soft"
-                >
-                  <Icon className="h-4 w-4" strokeWidth={1.5} />
-                </a>
-              ))}
-            </div>
+            {socialIcons.some(({ href }) => href) && (
+              <div className="mt-8 flex items-center gap-4">
+                {socialIcons
+                  .filter(({ href }) => href)
+                  .map(({ icon: Icon, href, label }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      aria-label={label}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-line-invert text-paper/70 transition-colors duration-300 hover:border-gold-soft hover:text-gold-soft"
+                    >
+                      <Icon className="h-4 w-4" strokeWidth={1.5} />
+                    </a>
+                  ))}
+              </div>
+            )}
           </div>
 
           <div>
@@ -70,8 +72,20 @@ export default function Footer() {
             </p>
             <ul className="space-y-3 text-[14px] text-paper/70">
               <li>{site.address}</li>
-              <li>{site.email}</li>
-              <li>{site.phone}</li>
+              <li>{site.constituencyAddress}</li>
+              <li>
+                <a href={`mailto:${site.email}`} className="hover:text-gold-soft">
+                  {site.email}
+                </a>
+              </li>
+              <li>
+                <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="hover:text-gold-soft">
+                  {site.phone}
+                </a>
+              </li>
+              <li className="pt-2 text-[12px] leading-relaxed text-paper/45">
+                {site.contactNote}
+              </li>
             </ul>
           </div>
         </div>

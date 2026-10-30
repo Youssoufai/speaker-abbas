@@ -1,30 +1,34 @@
-// Central site configuration — placeholder values should be replaced with verified information.
+// Public-service archive. Contact lines are the details published on the
+// National Assembly legislator profile, not a separately verified office desk.
 export const site = {
   name: "Sen. Jibrin Isah",
   shortName: "Jibrin Isah",
   nickname: "Echocho",
-  wordmark: "JIBRIN ISAH",
-  title: "Senator Representing Kogi East",
+  wordmark: "ECHOCHO",
+  title: "Senator for Kogi East",
   fullTitle:
-    "Senator representing Kogi East Senatorial District in the Senate of the Federal Republic of Nigeria",
-  institution: "Kogi East · Senate · National Assembly · Abuja",
+    "A public-service archive of Senator Jibrin Isah (Echocho), senator for Kogi East in the 10th National Assembly (2023–2027)",
+  institution: "Kogi East · 10th National Assembly · 2023–2027",
   url: "https://www.jibrinisah.gov.ng",
   description:
-    "The official website of Sen. Jibrin Isah, widely known as Echocho, Senator representing Kogi East in the Senate of the Federal Republic of Nigeria — leadership, legislative work, constituency service and news from his office.",
-  email: "office@jibrinisah.gov.ng",
-  phone: "+234 (0) 000 000 0000",
+    "Senator Jibrin Isah (Echocho), senator for Kogi East Senatorial District in the 10th National Assembly (2023–2027). His public service, legislative work, committee leadership and constituency projects.",
+  email: "isahj@ymail.com",
+  phone: "0818 565 1909",
   address: "National Assembly Complex, Three Arms Zone, Abuja, Nigeria",
+  constituencyAddress: "Old Egume Road, Anyigba, Kogi State",
+  contactNote:
+    "The office of Senator Jibrin Isah welcomes correspondence from Kogi East and from the public.",
   social: {
-    twitter: "https://twitter.com/",
-    facebook: "https://facebook.com/",
-    instagram: "https://instagram.com/",
-    youtube: "https://youtube.com/",
+    twitter: "",
+    facebook: "",
+    instagram: "",
+    youtube: "",
   },
 };
 
 export const navLinks = [
   { label: "About", href: "/about" },
-  { label: "Leadership", href: "/leadership" },
+  { label: "Biography", href: "/leadership" },
   { label: "Legislative Work", href: "/legislative-work" },
   { label: "Constituency", href: "/constituency" },
   { label: "News", href: "/news" },
@@ -34,12 +38,12 @@ export const navLinks = [
 
 export const footerLinks = [
   { label: "About", href: "/about" },
-  { label: "Leadership", href: "/leadership" },
+  { label: "Biography", href: "/leadership" },
   { label: "Legislative Work", href: "/legislative-work" },
-  { label: "The Legislative Agenda", href: "/agenda" },
+  { label: "Areas of Legislative Work", href: "/agenda" },
   { label: "Constituency", href: "/constituency" },
   { label: "News", href: "/news" },
   { label: "Speeches", href: "/speeches" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Contact the Office", href: "/contact" },
+  { label: "Contact", href: "/contact" },
 ];

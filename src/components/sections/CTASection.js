@@ -28,7 +28,7 @@ export default function CTASection() {
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         <AnimatedText
           as="h2"
-          text="Building a Legislature for a Stronger Nigeria."
+          text="A record of the work, kept in one place."
           className="text-balance font-display text-[clamp(2.2rem,5.5vw,4.5rem)] leading-[1.05] tracking-tight text-paper"
         />
         <motion.p
@@ -38,7 +38,7 @@ export default function CTASection() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mx-auto mt-8 max-w-md text-[16px] leading-relaxed text-paper/70"
         >
-          Stay informed about the work of Sen. Jibrin Isah for Kogi East.
+          Bills, motions, committee assignments and photographs, with the source and status each one can support.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 16 }}

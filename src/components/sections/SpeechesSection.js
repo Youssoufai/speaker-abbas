@@ -10,8 +10,9 @@ export default function SpeechesSection() {
       <div className="mx-auto max-w-[1600px]">
         <div className="flex flex-wrap items-end justify-between gap-8">
           <SectionHeading
-            eyebrow="Voice of the Senate"
+            eyebrow="Statements"
             title="Speeches & Statements"
+            description="Addresses and statements from his service in the Senate."
             tone="light"
           />
           <Reveal>
@@ -22,11 +23,17 @@ export default function SpeechesSection() {
         </div>
 
         <div className="mt-14">
-          {speeches.map((speech, i) => (
-            <Reveal key={speech.slug} delay={i * 0.06}>
-              <SpeechCard speech={speech} />
-            </Reveal>
-          ))}
+          {speeches.length === 0 ? (
+            <p className="max-w-xl text-[15px] leading-relaxed text-paper/70">
+              From the floor of the Senate and from engagements with the people of Kogi East.
+            </p>
+          ) : (
+            speeches.map((speech, i) => (
+              <Reveal key={speech.slug} delay={i * 0.06}>
+                <SpeechCard speech={speech} />
+              </Reveal>
+            ))
+          )}
         </div>
       </div>
     </section>

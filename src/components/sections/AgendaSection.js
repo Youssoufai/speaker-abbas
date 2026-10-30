@@ -8,9 +8,9 @@ export default function AgendaSection() {
     <section className="bg-ink px-6 py-28 md:px-10 md:py-36">
       <div className="mx-auto max-w-[1600px]">
         <SectionHeading
-          eyebrow="Priorities"
-          title="The Legislative Agenda"
-          description="Six priority areas shaping the legislative direction of the Senate."
+          eyebrow="Recorded work"
+          title="Areas of Legislative Work"
+          description="Health, education, agriculture, roads, customs and public finance — the work he has taken to the Senate for Kogi East."
           tone="light"
         />
 

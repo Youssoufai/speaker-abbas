@@ -12,6 +12,10 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const subject = String(data.get("subject") || "");
+    const body = `From: ${data.get("name")} <${data.get("email")}>\n\n${data.get("message")}`;
+    window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
   };
 
@@ -20,12 +24,16 @@ export default function ContactForm() {
       <div>
         <Reveal>
           <h2 className="font-display text-3xl tracking-tight text-ink">
-            Get in Touch
+            The Office
           </h2>
+          <p className="mt-4 max-w-md text-[14px] leading-relaxed text-ink-soft/70">
+            {site.contactNote}
+          </p>
         </Reveal>
         <div className="mt-10 space-y-6">
           {[
             { icon: MapPin, text: site.address },
+            { icon: MapPin, text: site.constituencyAddress },
             { icon: Mail, text: site.email },
             { icon: Phone, text: site.phone },
           ].map(({ icon: Icon, text }, i) => (
@@ -47,8 +55,8 @@ export default function ContactForm() {
             className="border border-line bg-paper-dim p-10 text-center"
           >
             <p className="font-display text-xl text-ink">Thank you.</p>
-            <p className="mt-3 text-[14px] text-ink-soft/70">
-              Your message has been received by the office of {site.name}.
+            <p className="mt-3 text-[14px] leading-relaxed text-ink-soft/70">
+              The office of {site.name} is glad to hear from you.
             </p>
           </motion.div>
         ) : (
@@ -65,13 +73,14 @@ export default function ContactForm() {
               </label>
               <textarea
                 id="message"
+                name="message"
                 required
                 rows={5}
                 className="mt-2 w-full border-b border-line bg-transparent py-2 text-[15px] text-ink outline-none transition-colors focus:border-forest"
               />
             </div>
             <Button type="submit" variant="primary">
-              Send Message
+              Send message
             </Button>
           </form>
         )}
@@ -91,6 +100,7 @@ function Field({ label, id, type = "text" }) {
       </label>
       <input
         id={id}
+        name={id}
         type={type}
         required
         className="mt-2 w-full border-b border-line bg-transparent py-2 text-[15px] text-ink outline-none transition-colors focus:border-forest"

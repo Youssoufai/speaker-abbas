@@ -7,7 +7,7 @@ import { photos } from "@/data/photos";
 
 export const metadata = {
   title: "Legislative Work",
-  description: `Legislative work and parliamentary activity led by ${site.name}.`,
+  description: `Bills, motions and committee leadership of ${site.name}, senator for Kogi East.`,
 };
 
 export default function LegislativeWorkPage() {

@@ -51,7 +51,7 @@ export default function Hero() {
 
         <AnimatedText
           as="h1"
-          text={["Leadership Through", "Legislation."]}
+          text={["A Record of", "Public Service."]}
           delay={0.35}
           className="font-display text-[clamp(3.2rem,9vw,9rem)] font-normal leading-[0.98] tracking-tight text-paper"
         />
@@ -71,11 +71,11 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.05 }}
           className="mt-10 flex flex-wrap items-center gap-4"
         >
-          <Button href="/leadership" variant="gold">
-            Explore His Work
+          <Button href="/legislative-work" variant="gold">
+            Legislative Record
           </Button>
-          <Button href="/agenda" variant="outline" className="text-paper border-paper/35">
-            The Legislative Agenda
+          <Button href="/leadership" variant="outline" className="text-paper border-paper/35">
+            Biography
           </Button>
         </motion.div>
 

@@ -6,7 +6,7 @@ import { site } from "@/data/site";
 
 export const metadata = {
   title: "News",
-  description: `Latest news from the Office of ${site.name}.`,
+  description: `Reports of the legislative work, committee leadership and constituency projects of ${site.name} for Kogi East.`,
 };
 
 export default function NewsPage() {
@@ -14,9 +14,9 @@ export default function NewsPage() {
     <section className="bg-paper px-6 py-32 md:px-10">
       <div className="mx-auto max-w-[1600px]">
         <SectionHeading
-          eyebrow="Newsroom"
-          title="Latest from the Office"
-          description={`Announcements, legislative updates and engagements from the office of ${site.name}.`}
+          eyebrow="Reports"
+          title="From the Record"
+          description={`Reports of the legislative work, committee leadership and constituency projects of ${site.name}.`}
         />
 
         <div className="mt-16 grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">

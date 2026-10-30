@@ -17,8 +17,8 @@ export default function Home() {
       <Introduction />
       <LeadershipTimeline compact />
       <AgendaSection />
-      <LegislativeWorkSection />
-      <PublicServiceRecord />
+      <LegislativeWorkSection limit={3} />
+      <PublicServiceRecord limit={4} />
       <ConstituencySection />
       <NewsSection />
       <SpeechesSection />

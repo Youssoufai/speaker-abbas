@@ -12,38 +12,38 @@ export const photos = {
   },
   schoolExam: {
     src: "/images/work/school-exam.jpg",
-    alt: "Students writing an examination in a constituency school",
+    alt: "Students writing an examination",
     position: "center 40%",
   },
   marketStalls: {
     src: "/images/work/market-stalls.jpg",
-    alt: "A row of lock-up shops under a metal roof in Kogi East",
+    alt: "A row of open-front lock-up shops under a metal roof",
     position: "center",
   },
   roadWorks: {
     src: "/images/work/road-works.jpg",
-    alt: "Road construction works in Kogi East, including excavation and foundation",
+    alt: "Collage of road excavation, reinforcement and a site board",
     position: "center",
     fit: "contain",
   },
   youthEmpowerment: {
     src: "/images/work/youth-empowerment.jpg",
-    alt: "Youths at a training and empowerment programme in Kogi East Senatorial District",
+    alt: "A group holding a banner for a youth training in Kogi East, dated November 2024",
     position: "center",
   },
   engagement: {
     src: "/images/work/engagement.jpg",
-    alt: "Sen. Jibrin Isah during a constituency engagement",
+    alt: "Sen. Jibrin Isah with a constituent",
     position: "center 30%",
   },
   communityAddress: {
     src: "/images/work/community-address.jpg",
-    alt: "A community address during a constituency engagement in Kogi East",
+    alt: "People gathered outdoors while a speaker addresses them",
     position: "center 35%",
   },
   officialMeeting: {
     src: "/images/work/official-meeting.jpg",
-    alt: "Sen. Jibrin Isah at an official engagement",
+    alt: "Four men at an indoor engagement, with Kogi State insignia on the wall",
     position: "center 20%",
   },
 };

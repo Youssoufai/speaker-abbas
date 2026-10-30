@@ -12,9 +12,9 @@ export default function ConstituencySection() {
       <div className="mx-auto max-w-[1600px]">
         <div className="grid gap-12 md:grid-cols-2 md:items-end">
           <SectionHeading
-            eyebrow="On the Ground"
-            title="Serving Kogi East"
-            description="Development, community engagement and empowerment initiatives across Kogi East Senatorial District."
+            eyebrow="Constituency"
+            title="Photographs from Kogi East"
+            description="Roads, markets, youth training and community visits carried out for the people of Kogi East."
           />
           <Reveal
             variant="right"
@@ -39,7 +39,7 @@ export default function ConstituencySection() {
 
         <Reveal className="mt-14">
           <Button href="/constituency" variant="outline" className="text-ink">
-            Explore Kogi East Work
+            View the constituency record
           </Button>
         </Reveal>
       </div>

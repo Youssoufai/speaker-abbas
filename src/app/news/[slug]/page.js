@@ -62,9 +62,33 @@ export default async function NewsArticlePage({ params }) {
             </Link>
           </Reveal>
           <Reveal delay={0.05}>
-            <p className="mt-10 text-[17px] leading-relaxed text-ink-soft/85">
-              {article.content}
-            </p>
+            <div className="mt-10 space-y-6">
+              {article.content.split(/\n\n+/).map((paragraph) => (
+                <p
+                  key={paragraph.slice(0, 48)}
+                  className="text-[17px] leading-relaxed text-ink-soft/85"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            {article.source ? (
+              <p className="mt-10 text-[13px] uppercase tracking-[0.14em] text-ink-soft/55">
+                Source:{" "}
+                {article.sourceUrl ? (
+                  <a
+                    href={article.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-forest underline-offset-4 hover:underline"
+                  >
+                    {article.source}
+                  </a>
+                ) : (
+                  article.source
+                )}
+              </p>
+            ) : null}
           </Reveal>
         </div>
       </section>

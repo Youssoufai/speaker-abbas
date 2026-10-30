@@ -49,6 +49,11 @@ export default function NewsCard({ article, featured = false }) {
           <p className="mt-2 max-w-lg text-[14px] leading-relaxed text-ink-soft/70">
             {article.excerpt}
           </p>
+          {article.source ? (
+            <p className="mt-3 text-[12px] uppercase tracking-[0.12em] text-ink-soft/45">
+              {article.source}
+            </p>
+          ) : null}
           <span className="mt-4 inline-flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.14em] text-forest">
             Read More
             <span className="transition-transform duration-300 group-hover:translate-x-1">

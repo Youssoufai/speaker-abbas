@@ -2,14 +2,14 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
 import { serviceRecord, milestones } from "@/data/legislative";
 
-export default function PublicServiceRecord() {
+export default function PublicServiceRecord({ limit }) {
   return (
     <section className="bg-paper-dim px-6 py-28 md:px-10 md:py-36">
       <div className="mx-auto max-w-[1600px]">
         <SectionHeading
           eyebrow="Accountability"
           title="Public Service Record"
-          description="A transparent, factual overview of parliamentary and public service activity."
+          description="Legislative work, committee leadership and constituency projects across his years in the Senate."
         />
 
         <div className="mt-16 grid gap-px overflow-hidden rounded-none bg-line md:grid-cols-4">
@@ -19,9 +19,11 @@ export default function PublicServiceRecord() {
               delay={i * 0.06}
               className="bg-paper p-8"
             >
-              <p className="font-display text-4xl tracking-tight text-forest">
-                {item.value}
-              </p>
+              {item.value ? (
+                <p className="font-display text-4xl tracking-tight text-forest">
+                  {item.value}
+                </p>
+              ) : null}
               <p className="mt-3 text-[13px] font-medium uppercase tracking-[0.14em] text-ink">
                 {item.label}
               </p>
@@ -33,7 +35,7 @@ export default function PublicServiceRecord() {
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2">
-          {milestones.map((m, i) => (
+          {(limit ? milestones.slice(0, limit) : milestones).map((m, i) => (
             <Reveal
               key={m.id}
               delay={i * 0.08}

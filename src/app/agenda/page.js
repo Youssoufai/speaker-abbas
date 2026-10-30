@@ -4,8 +4,8 @@ import PlaceholderMedia from "@/components/ui/PlaceholderMedia";
 import { site } from "@/data/site";
 
 export const metadata = {
-  title: "The Legislative Agenda",
-  description: `The legislative agenda and priority areas championed by ${site.name}.`,
+  title: "Areas of Legislative Work",
+  description: `Documented areas of legislative work by ${site.name} for Kogi East: health, education, agriculture, roads, customs oversight and a public-finance inquiry.`,
 };
 
 export default function AgendaPage() {
@@ -17,12 +17,12 @@ export default function AgendaPage() {
         <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 pb-16 md:px-10">
           <Reveal>
             <span className="text-[12px] uppercase tracking-[0.24em] text-gold-soft">
-              Priorities
+              Recorded work
             </span>
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="mt-4 font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.02] tracking-tight">
-              The Legislative Agenda
+              Areas of Legislative Work
             </h1>
           </Reveal>
         </div>

@@ -6,7 +6,7 @@ import { photos } from "@/data/photos";
 
 export const metadata = {
   title: "Constituency",
-  description: `Constituency development and community engagement led by ${site.name}.`,
+  description: `Constituency projects and community engagements of ${site.name} across Kogi East.`,
 };
 
 export default function ConstituencyPage() {
@@ -29,7 +29,7 @@ export default function ConstituencyPage() {
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="mt-4 font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.02] tracking-tight">
-              Serving Kogi East
+              Constituency Record
             </h1>
           </Reveal>
         </div>

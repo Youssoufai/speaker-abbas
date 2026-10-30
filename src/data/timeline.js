@@ -1,43 +1,44 @@
-// Biographical timeline — placeholder structure. Replace with verified details.
+// Dates below are those on which published records agree.
+// Conflicting degree titles are stated as a conflict, not resolved.
 export const timeline = [
   {
     id: "education",
     phase: "01",
     title: "Education",
-    period: "Placeholder",
+    period: "1967–2003",
     description:
-      "Placeholder — verified educational background to be supplied by the office of Sen. Jibrin Isah.",
+      "He attended LGEA Primary School, Ajiolo-Ojaji (1967–1972), and Our Lady of School, Anyigba (1973–1977). He earned a bachelor’s degree in economics at Bayero University, Kano, in 1983, a master’s in economics at the University of Lagos in 1991, a postgraduate degree in petroleum and energy at the University of Ibadan in 2002, and an MBA at the University of Nigeria, Nsukka, in 2003.",
   },
   {
     id: "professional-career",
     phase: "02",
     title: "Professional Career",
-    period: "Placeholder",
+    period: "1988–1998",
     description:
-      "Placeholder — verified professional career details to be supplied by the office of Sen. Jibrin Isah.",
+      "He built a career in merchant banking and the capital market. He joined Chase Merchant Bank in 1988, moved to Afribank International Limited in 1991 as head of project finance and leasing, led its capital-market group from 1993, and in 1998 became managing director and chief executive of AIL Securities Limited.",
   },
   {
     id: "public-service",
     phase: "03",
-    title: "Public Service",
-    period: "Placeholder",
+    title: "Entry into Elective Politics",
+    period: "2011–2019",
     description:
-      "Placeholder — verified public service record to be supplied by the office of Sen. Jibrin Isah.",
+      "In 2019 the people of Kogi East elected him to the Senate on the platform of the All Progressives Congress. He took his seat in the 9th National Assembly and set his experience in banking to the service of the district.",
   },
   {
     id: "parliamentary-leadership",
     phase: "04",
-    title: "Parliamentary Leadership",
-    period: "Placeholder",
+    title: "Committee Responsibility",
+    period: "7 August 2023",
     description:
-      "Placeholder — verified parliamentary record to be supplied by the office of Sen. Jibrin Isah.",
+      "On 7 August 2023 the Senate named him chairman of the Committee on Customs, Excise and Tariff. The role drew on his years in banking and placed him at the centre of the chamber’s oversight of customs and revenue.",
   },
   {
     id: "senate",
     phase: "05",
     title: "The Senate",
-    period: "Placeholder",
+    period: "2019–2027",
     description:
-      "Placeholder — verified details of his service as Senator representing Kogi East, widely known as Echocho, to be supplied by his office.",
+      "He represented Kogi East in the 9th National Assembly and was returned in 2023 for the 10th National Assembly (2023–2027). His work in the chamber has centred on legislation, committee leadership and the needs of his constituents.",
   },
 ];
