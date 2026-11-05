@@ -13,19 +13,32 @@ import { cn } from "@/lib/utils";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 40);
+      // Tuck the bar away while reading downward; bring it back on scroll up.
+      if (Math.abs(y - last) < 8) return;
+      setHidden(y > 400 && y > last);
+      last = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
+  // Close the mobile menu on navigation (state adjusted during render).
+  const [prevPath, setPrevPath] = useState(pathname);
+  if (prevPath !== pathname) {
+    setPrevPath(pathname);
     setMenuOpen(false);
-  }, [pathname]);
+    setHidden(false);
+  }
 
   const solid = scrolled || !isHome || menuOpen;
 
@@ -33,12 +46,12 @@ export default function Navbar() {
     <>
       <motion.header
         initial={{ y: -40, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        animate={{ y: hidden && !menuOpen ? "-100%" : 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className={cn(
           "fixed inset-x-0 top-0 z-[999] transition-colors duration-500",
           solid
-            ? "bg-paper/90 backdrop-blur-md border-b border-line"
+            ? "bg-paper/80 backdrop-blur-xl border-b border-line shadow-[0_10px_40px_-20px_rgba(8,29,22,0.25)]"
             : "bg-transparent"
         )}
       >

@@ -1,6 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Reveal from "@/components/ui/Reveal";
+import AnimatedText from "@/components/ui/AnimatedText";
 import { cn } from "@/lib/utils";
 
 export default function SectionHeading({
@@ -27,21 +29,27 @@ export default function SectionHeading({
               tone === "dark" ? "text-forest" : "text-gold-soft"
             )}
           >
-            <span className="h-px w-8 bg-current" />
+            <motion.span
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+              className="h-px w-8 origin-left bg-current"
+            />
             {eyebrow}
           </span>
         </Reveal>
       )}
-      <Reveal delay={0.05}>
-        <h2
-          className={cn(
-            "text-balance font-display text-[clamp(2rem,4.2vw,3.4rem)] leading-[1.08] tracking-tight",
-            tone === "dark" ? "text-ink" : "text-paper"
-          )}
-        >
-          {title}
-        </h2>
-      </Reveal>
+      <AnimatedText
+        as="h2"
+        inView
+        text={title}
+        stagger={0.05}
+        className={cn(
+          "text-balance font-display text-[clamp(2.1rem,4.6vw,3.8rem)] leading-[1.05] tracking-tight",
+          tone === "dark" ? "text-ink" : "text-paper"
+        )}
+      />
       {description && (
         <Reveal delay={0.1}>
           <p

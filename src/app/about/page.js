@@ -1,6 +1,8 @@
+import PageHero from "@/components/ui/PageHero";
+import { webImages } from "@/data/webImages";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
-import PlaceholderMedia from "@/components/ui/PlaceholderMedia";
+import ImageReveal from "@/components/ui/ImageReveal";
 import { site } from "@/data/site";
 import { portraits } from "@/data/portraits";
 
@@ -12,28 +14,12 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="relative flex h-[60vh] min-h-[420px] items-end overflow-hidden bg-forest-deep text-paper">
-        <PlaceholderMedia
-          src={portraits.closeup.src}
-          alt={portraits.closeup.alt}
-          position={portraits.closeup.position}
-          priority
-          className="absolute inset-0"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-ink/10" />
-        <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 pb-16 md:px-10">
-          <Reveal>
-            <span className="text-[12px] uppercase tracking-[0.24em] text-gold-soft">
-              About
-            </span>
-          </Reveal>
-          <Reveal delay={0.05}>
-            <h1 className="mt-4 font-display text-[clamp(2.5rem,6vw,5rem)] leading-[1.02] tracking-tight">
-              {site.name}
-            </h1>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="About"
+        title={site.name}
+        image={webImages.assembly}
+        description="Economist, merchant banker and senator for Kogi East."
+      />
 
       <section className="bg-paper px-6 py-24 md:px-10 md:py-32">
         <div className="mx-auto grid max-w-[1600px] gap-16 md:grid-cols-2">
@@ -64,14 +50,18 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <Reveal variant="scale" className="h-[360px] md:h-[460px]">
-            <PlaceholderMedia
+          <div className="md:sticky md:top-28 md:self-start">
+            <ImageReveal
               src={portraits.official.src}
               alt={portraits.official.alt}
               position={portraits.official.position}
-              className="h-full w-full"
+              className="h-[440px] md:h-[620px]"
             />
-          </Reveal>
+            <Reveal delay={0.3} className="mt-5 flex items-center justify-between border-t border-line pt-4">
+              <span className="text-[12px] uppercase tracking-[0.18em] text-ink-soft/60">Official portrait</span>
+              <span className="font-display text-[15px] italic text-forest">{site.nickname}</span>
+            </Reveal>
+          </div>
         </div>
       </section>
     </>

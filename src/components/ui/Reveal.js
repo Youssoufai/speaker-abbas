@@ -3,26 +3,28 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
+export const EASE = [0.16, 1, 0.3, 1];
+
 const variantsMap = {
   up: {
-    hidden: { opacity: 0, y: 36 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 40, filter: "blur(6px)" },
+    visible: { opacity: 1, y: 0, filter: "blur(0px)" },
   },
   fade: {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   },
   left: {
-    hidden: { opacity: 0, x: -36 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -40, filter: "blur(6px)" },
+    visible: { opacity: 1, x: 0, filter: "blur(0px)" },
   },
   right: {
-    hidden: { opacity: 0, x: 36 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: 40, filter: "blur(6px)" },
+    visible: { opacity: 1, x: 0, filter: "blur(0px)" },
   },
   scale: {
-    hidden: { opacity: 0, scale: 0.94 },
-    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0.94, filter: "blur(8px)" },
+    visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
   },
 };
 
@@ -34,10 +36,10 @@ export default function Reveal({
   as = "div",
   variant = "up",
   delay = 0,
-  duration = 0.8,
+  duration = 0.9,
   className,
   once = true,
-  amount = 0.3,
+  amount = 0.25,
 }) {
   const MotionTag = motion[as] ?? motion.div;
 
@@ -46,7 +48,7 @@ export default function Reveal({
       initial="hidden"
       whileInView="visible"
       viewport={{ once, amount }}
-      transition={{ duration, delay, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration, delay, ease: EASE }}
       variants={variantsMap[variant]}
       className={cn(className)}
     >

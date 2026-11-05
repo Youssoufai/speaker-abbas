@@ -90,9 +90,25 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="overflow-hidden border-b border-line-invert py-6">
+          <motion.p
+            aria-hidden="true"
+            initial={{ y: "100%" }}
+            whileInView={{ y: "0%" }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+            className="select-none bg-gradient-to-b from-paper/25 to-paper/[0.03] bg-clip-text text-center font-display text-[19vw] leading-[0.85] tracking-tighter text-transparent lg:text-[16.5vw] 2xl:text-[15rem]"
+          >
+            {site.wordmark}
+          </motion.p>
+        </div>
+
         <div className="flex flex-col items-start justify-between gap-6 pt-8 md:flex-row md:items-center">
           <p className="text-[12px] text-paper/40">
-            © {new Date().getFullYear()} {site.wordmark}. All rights reserved.
+            © {new Date().getFullYear()} {site.wordmark}. All rights reserved. ·{" "}
+            <Link href="/credits" className="underline-offset-4 hover:text-gold-soft hover:underline">
+              Image credits
+            </Link>
           </p>
           <motion.button
             type="button"

@@ -8,8 +8,8 @@ export default function ProjectCard({ project }) {
     <motion.div whileHover="hover" initial="idle" className="group">
       <div className="relative h-64 overflow-hidden">
         <motion.div
-          variants={{ idle: { scale: 1 }, hover: { scale: 1.06 } }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          variants={{ idle: { scale: 1 }, hover: { scale: 1.08 } }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="h-full w-full"
         >
           <PlaceholderMedia

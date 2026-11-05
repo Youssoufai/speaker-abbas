@@ -15,8 +15,8 @@ export default function NewsCard({ article, featured = false }) {
           }
         >
           <motion.div
-            variants={{ idle: { scale: 1 }, hover: { scale: 1.06 } }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            variants={{ idle: { scale: 1 }, hover: { scale: 1.08 } }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="h-full w-full"
           >
             <PlaceholderMedia

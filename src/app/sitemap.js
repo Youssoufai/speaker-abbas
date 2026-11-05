@@ -14,6 +14,7 @@ export default function sitemap() {
     "/speeches",
     "/gallery",
     "/contact",
+    "/credits",
   ].map((route) => ({
     url: `${site.url}${route}`,
     lastModified: new Date(),

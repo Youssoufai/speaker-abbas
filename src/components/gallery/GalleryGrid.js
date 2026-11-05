@@ -1,38 +1,87 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import PlaceholderMedia from "@/components/ui/PlaceholderMedia";
+import { cn } from "@/lib/utils";
 
-export default function GalleryGrid({ items }) {
+export default function GalleryGrid({ items: allItems, filterable = false }) {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [filter, setFilter] = useState("All");
+  const categories = useMemo(
+    () => ["All", ...new Set(allItems.map((item) => item.category))],
+    [allItems]
+  );
+  const items = useMemo(
+    () => (filter === "All" ? allItems : allItems.filter((item) => item.category === filter)),
+    [allItems, filter]
+  );
 
   const close = () => setActiveIndex(null);
   const next = () => setActiveIndex((i) => (i + 1) % items.length);
   const prev = () => setActiveIndex((i) => (i - 1 + items.length) % items.length);
 
+  useEffect(() => {
+    if (activeIndex === null) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") setActiveIndex(null);
+      if (e.key === "ArrowRight") setActiveIndex((i) => (i + 1) % items.length);
+      if (e.key === "ArrowLeft") setActiveIndex((i) => (i - 1 + items.length) % items.length);
+    };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [activeIndex, items.length]);
+
   return (
     <>
-      <div className="columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
+      {filterable && (
+        <div className="mb-12 flex flex-wrap gap-2">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              type="button"
+              onClick={() => setFilter(cat)}
+              className={cn(
+                "relative rounded-full border px-5 py-2 text-[12px] font-medium uppercase tracking-[0.14em] transition-colors duration-300",
+                filter === cat ? "border-forest text-paper" : "border-line text-ink-soft hover:border-forest/40"
+              )}
+            >
+              {filter === cat && (
+                <motion.span
+                  layoutId="gallery-filter"
+                  transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                  className="absolute inset-0 rounded-full bg-forest"
+                />
+              )}
+              <span className="relative z-10">{cat}</span>
+            </button>
+          ))}
+        </div>
+      )}
+      <div key={filter} className="columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
         {items.map((item, i) => (
           <motion.button
             key={item.id}
             type="button"
             onClick={() => setActiveIndex(i)}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, delay: (i % 6) * 0.05, ease: [0.16, 1, 0.3, 1] }}
-            whileHover="hover"
-            initial2="idle"
+            layout
+            initial={{ opacity: 0, y: 40, clipPath: "inset(12% 0% 0% 0%)" }}
+            whileInView={{ opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)" }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.9, delay: (i % 6) * 0.07, ease: [0.16, 1, 0.3, 1] }}
             className="group relative block w-full overflow-hidden text-left"
             style={{ breakInside: "avoid" }}
           >
-            <motion.div
-              variants={{ idle: { scale: 1 }, hover: { scale: 1.06 } }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className={i % 3 === 0 ? "h-[420px]" : "h-[300px]"}
+            <div
+              className={cn(
+                "transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.07]",
+                i % 3 === 0 ? "h-[420px]" : "h-[300px]"
+              )}
             >
               <PlaceholderMedia
                 src={item.image}
@@ -41,7 +90,7 @@ export default function GalleryGrid({ items }) {
                 fit={item.fit}
                 className="h-full w-full"
               />
-            </motion.div>
+            </div>
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute bottom-0 left-0 translate-y-2 p-5 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
               <p className="text-[11px] uppercase tracking-[0.14em] text-gold-soft">

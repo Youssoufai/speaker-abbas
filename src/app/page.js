@@ -4,6 +4,7 @@ import LeadershipTimeline from "@/components/sections/LeadershipTimeline";
 import AgendaSection from "@/components/sections/AgendaSection";
 import LegislativeWorkSection from "@/components/sections/LegislativeWorkSection";
 import PublicServiceRecord from "@/components/sections/PublicServiceRecord";
+import KogiEastBand from "@/components/sections/KogiEastBand";
 import ConstituencySection from "@/components/sections/ConstituencySection";
 import NewsSection from "@/components/sections/NewsSection";
 import SpeechesSection from "@/components/sections/SpeechesSection";
@@ -19,6 +20,7 @@ export default function Home() {
       <AgendaSection />
       <LegislativeWorkSection limit={3} />
       <PublicServiceRecord limit={4} />
+      <KogiEastBand />
       <ConstituencySection />
       <NewsSection />
       <SpeechesSection />

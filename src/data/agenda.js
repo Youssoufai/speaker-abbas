@@ -1,4 +1,5 @@
 import { photos } from "@/data/photos";
+import { webImages } from "@/data/webImages";
 
 export const agendaItems = [
   {
@@ -25,8 +26,8 @@ export const agendaItems = [
     title: "Agriculture",
     description:
       "He introduced a bill to establish a National Cashew Production and Research Institute at Idah, so the cashew wealth of Kogi East can support farmers, processing and jobs.",
-    image: "/images/legislative/farmland.jpeg",
-    position: "center",
+    image: webImages.cashew.src,
+    position: webImages.cashew.position,
   },
   {
     id: "roads",
