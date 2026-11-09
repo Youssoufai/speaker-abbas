@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import ScrollProgress from "@/components/layout/ScrollProgress";
 import GrainOverlay from "@/components/ui/GrainOverlay";
 import { site } from "@/data/site";
+import { Analytics } from "@vercel/analytics/next";
 
 const fontSans = Inter({
   variable: "--font-sans",
@@ -67,6 +68,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
